@@ -1,0 +1,11 @@
+package Game;
+
+public enum Conditions {
+	CONTINUE,
+	PLAYER_WIN,
+	PLAYER_LOSE,
+	WHITE_IN_CHECK,
+	BLACK_IN_CHECK,
+	WHITE_CHECKMATE,
+	BLACK_CHECKMATE;
+}
