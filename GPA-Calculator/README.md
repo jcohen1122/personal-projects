@@ -1,7 +1,7 @@
 <h1>Run Folder</h1>
 
 <h2>Grade Calculator</h2>
-The Grade Calculator file is an Unix executable file intended to execute the GradeCalc.jar file from the terminal. The benefit of doing this roundabout way of executing the already executable jar file is because opening it from the terminal allows the program to have access to personal folders, which is needed when saving/loading a grade file. When the program is loaded just through the jar, the program does not have access to any folders.
+The Grade Calculator file is an Unix executable file intended to execute the GradeCalc.jar file from the terminal. The benefit of doing this roundabout way of executing the jar file is because executing it from the terminal allows the program to have access to personal folders, which is needed when saving/loading a grade file. When the program is loaded just through the jar, the program does not have access to any folders.
 
 <h2>GradeCalc.jar</h2>
 This file will execute the program.
