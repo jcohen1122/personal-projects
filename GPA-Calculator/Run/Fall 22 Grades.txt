@@ -1,0 +1,29 @@
+{
+	"entries":  [
+		{
+		"Course"	:	"CMSC216",
+		"Credits"	:	"4",
+		"Grade"		:	"B-",
+		},
+		{
+		"Course"	:	"CMSC250",
+		"Credits"	:	"4",
+		"Grade"		:	"A-",
+		},
+		{
+		"Course"	:	"BMGT301",
+		"Credits"	:	"3",
+		"Grade"		:	"A-",
+		},
+		{
+		"Course"	:	"BMGT221",
+		"Credits"	:	"3",
+		"Grade"		:	"A",
+		},
+		{
+		"Course"	:	"CPBE225",
+		"Credits"	:	"3",
+		"Grade"		:	"A-",
+		}
+	]
+}
