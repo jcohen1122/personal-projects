@@ -46,4 +46,88 @@ The UI contains many features, including:
 </ul>
 
 <h2>Calculate.java</h2>
+This class does the leg-work of calculating the user's GPA. Various methods are featured.
+<br><br>
 
+```java
+public static String format(String course, int credits, String grade);
+```
+<ul>
+  <li>This method formats a single row of course information into a JSON entry.</li>
+</ul>
+
+```java
+public static void push(String entry);
+```
+<ul>
+  <li>This method pushes a single course entry into the entries ArrayList. Assumes entry is in JSON.</li>
+</ul>
+
+```java
+public static void pop(String entry);
+```
+<ul>
+  <li>This method pops a single course entry from the entries ArrayList. Used to clear one user entry.</li>
+</ul>
+
+```java
+public static void clear();
+```
+<ul>
+  <li>This method resets the entire entries ArrayList. Used to clear all user entries.</li>
+</ul>
+
+```java
+public static Entry loadEntry(String entry);
+```
+<ul>
+  <li>This method takes a course entry, assumed to be in JSON, and constructs its Entry object counterpart, parsing information for each category such as name, credits, and grade to create instance variables.</li>
+</ul>
+
+```java
+public static double calculateCumulativeGPA(int cumulativeCredits, double cumulativeGPA);
+```
+<ul>
+  <li>This method uses prior cumulative credits and GPA, and combines them with the current entries to calculate a new GPA. If the user does not enter any cumulative information, they are defaulted to 0 and 0.0 respectively.</li>
+</ul>
+
+```java
+public static String jsonEntries();
+```
+<ul>
+  <li>This method takes each entry and compiles them into a finalized JSON format. Used to save to a file.</li>
+</ul>
+
+```java
+public static String cleanEntries();
+```
+<ul>
+  <li>This method compiles the Entry object counterpart of each string course entry.</li>
+</ul>
+
+```java
+public static void load(String fromFile);
+```
+<ul>
+  <li>This method parses through the JSON grade file, deconstructing it to access individual values and store them, and then reconstructing the format to create the entries ArrayList.</li>
+</ul>
+
+```java
+public static void save(String toFile);
+```
+<ul>
+  <li>This method writes the result of jsonEntries() into a new file, allowing for a successful load execution later on.</li>
+</ul>
+
+<h2>Entry.java</h2>
+The object representation of a course entry. Features instance variables for class name, number of credits, and final grade.
+
+<h2>Grades.java</h2>
+The enum representation of all possible final grades for a course, ranging from A+ to F. The constructor assigns each grade the appropriate number of Quality Points per credit hour, which is used in the calculation of the user's GPA.
+
+```java
+public static Grades match(String grade);
+```
+<ul>
+  <li>Because it is unreasonable to ask the user to provide input such as "Grades.A" for an A or "Grades.BM" for a B-, the user is allowed to enter the natural format of their grade. This function will take that input, and using a switch statement, assign it to the appropriate enum representation. This allows the program to access the amount of Quality Points per credit hour for that entry.</li>
+</ul>
